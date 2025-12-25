@@ -1,0 +1,61 @@
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        width: 280px;
+    }
+
+    .content-wrapper {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 60px;
+        /* Space for mobile toggle */
+    }
+
+    .hero-title-v3 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle-v3 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title-v2 {
+        font-size: 2rem;
+    }
+
+    .blob-1,
+    .blob-2,
+    .blob-3 {
+        width: 300px;
+        height: 300px;
+        opacity: 0.3;
+    }
+
+    .hero-socials-v3 {
+        gap: 15px;
+    }
+
+    .social-icon-v3 {
+        width: 45px;
+        height: 45px;
+    }
+
+    .btn-v3 {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}

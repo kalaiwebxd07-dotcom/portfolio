@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalaiyarasan P | Portfolio</title>
+    <link rel="icon" href="data:,">
+    <meta name="description"
+        content="Portfolio of Kalaiyarasan P, CSE student at Muthayammal Engineering College. Specialized in Java, Python, and C.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<!-- Background Blobs (Keeping for glass effect) -->
+<div class="bg-blob blob-1"></div>
+<div class="bg-blob blob-2"></div>
+<div class="bg-blob blob-3"></div>
+
+<!-- Mobile Navigation Toggle -->
+<button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+</button>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Sidebar Navigation -->
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="profile-img-container">
+            <img src="profile.jpg" alt="Kalaiyarasan P" class="profile-img">
+        </div>
+    </div>
+    <nav class="sidebar-nav">
+        <a href="#about" class="sidebar-link active"><i class="fas fa-user"></i> About</a>
+        <a href="#experience" class="sidebar-link"><i class="fas fa-chart-line"></i> Experience</a>
+        <a href="#projects" class="sidebar-link"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#skills" class="sidebar-link"><i class="fas fa-tools"></i> Skills</a>
+        <a href="#education" class="sidebar-link"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+</aside>
+
+<main class="content-wrapper">
+    <section id="home" class="hero-section-v3">
+        <div class="hero-content-v3">
+            <h1 class="hero-title-v3">Hi, I'm <span class="highlight-name">Kalaiyarasan P.</span></h1>
+            <h2 class="hero-subtitle-v3">A <span class="typing-text" id="typewriter"></span></h2>
+            <p class="hero-bio-v3">Self-driven, quick starter, passionate programmer with a curious mind who enjoys
+                solving complex and challenging real-world problems.</p>
+
+            <div class="hero-socials-v3">
+                <a href="https://www.linkedin.com/in/kalaiyarasan-p-cs100" target="_blank" class="social-icon-v3">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/kalaiwebxd07-dotcom/html" target="_blank" class="social-icon-v3">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://leetcode.com/u/kalai_script/" target="_blank" class="social-icon-v3">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+            </div>
+
+            <div class="hero-actions-v3">
+                <a href="#about" class="btn-v3 btn-fill-v3">Read More</a>
+                <a href="#contact" class="btn-v3 btn-outline-v3">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <h2 class="section-heading">About Me</h2>
+        <div class="about-container">
+            <div class="glass-card about-card">
+                <p>I am a passionate <strong>Computer Science Engineering</strong> student at <strong>Muthayammal
+                        Engineering College</strong>. My journey in tech is driven by a curiosity to solve complex
+                    problems and build intuitive user interfaces.</p>
+                <p>With a strong foundation in Java and C, I love exploring the intersection of creative design and
+                    robust engineering.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="reveal">
+        <h2 class="section-heading">Experience</h2>
+        <div class="experience-grid">
+            <div class="glass-card experience-card">
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="date">Jun 2024 - Present</span>
+                    <h3>Internship</h3>
+                    <h4>NoviTech R & D Private Limited</h4>
+                    <p>Focusing on innovative research and development projects. Gaining hands-on experience in
+                        modern technology stacks and R&D methodologies.</p>
+                    <div class="card-tags">
+                        <span class="tag">R & D</span>
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Tech Intern</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <h2 class="section-heading">Projects</h2>
+        <div class="projects-grid-v2">
+            <!-- Project 1: Java Quiz -->
+            <div class="project-card-v2">
+                <div class="card-img-v2 java-quiz-v2-bg">
+                    <i class="fas fa-terminal mockup-icon"></i>
+                </div>
+                <div class="card-content-v2">
+                    <div class="card-header-v2">
+                        <h3>Java Quiz Web-App</h3>
+                        <i class="fas fa-ellipsis-v menu-dot"></i>
+                    </div>
+                    <p>A comprehensive Java MCQ quiz playing web app featuring multiple categories and real-time
+                        scoring.</p>
+                    <div class="card-actions-v2">
+                        <a href="https://quiz-bx64.onrender.com/" target="_blank" class="btn-visit">Visit
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: CGPA Calculator -->
+            <div class="project-card-v2">
+                <div class="card-img-v2 cgpa-v2-bg">
+                    <i class="fas fa-calculator mockup-icon"></i>
+                </div>
+                <div class="card-content-v2">
+                    <div class="card-header-v2">
+                        <h3>CGPA Calculator</h3>
+                        <i class="fas fa-ellipsis-v menu-dot"></i>
+                    </div>
+                    <p>An intuitive CGPA calculation web app designed for engineering students to track academic
+                        performance.</p>
+                    <div class="card-actions-v2">
+                        <a href="https://cgpa-jsqz.onrender.com" target="_blank" class="btn-visit">Visit Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2 class="section-title-v2">Languages and Databases</h2>
+        <div class="skills-row-v2">
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <span>Python</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                <span>Java</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                <span>C</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <span>HTML5</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <span>CSS3</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                <span>MySQL</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                    alt="Firebase">
+                <span>Firebase</span>
+            </div>
+        </div>
+
+        <h2 class="section-title-v2" style="margin-top: 50px;">Developer Tools</h2>
+        <div class="skills-row-v2">
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                <span>Git</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                <span>GitHub</span>
+            </div>
+            <div class="skill-item-v2">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                <span>VS Code</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="reveal">
+        <h2 class="section-heading">Education</h2>
+        <div class="glass-card education-card">
+            <h3>B.E Computer Science and Engineering</h3>
+            <h4>Muthayammal Engineering College</h4>
+            <p class="date">2024 - 2028</p>
+            <p>Focusing on software engineering, data structures and algorithms.</p>
+            <p><strong>Current CGPA: 8.79/10</strong></p>
+        </div>
+    </section>
+
+    <section id="achievements" class="reveal">
+        <h2 class="section-heading">Achievements</h2>
+        <div class="achievements-grid">
+            <div class="glass-card achievement-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value">100+</div>
+                <div class="stat-label">LeetCode Active Days</div>
+                <p>Consistent problem solving with a focus on Data Structures and Algorithms.</p>
+            </div>
+            <div class="glass-card achievement-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value">200+</div>
+                <div class="stat-label">Problems Solved</div>
+                <p>Successfully tackled complex problems across LeetCode and CodeChef platforms.</p>
+            </div>
+            <div class="glass-card achievement-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-value">4 Star</div>
+                <div class="stat-label">CodeChef Rating</div>
+                <p>Demonstrating high-level competitive programming skills and consistency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <div class="contact-container">
+            <h2 class="section-heading">Contact</h2>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjgbnplb" method="POST">
+                <input type="hidden" name="_next" value="https://kalaiwebxd07-dotcom.github.io/html/">
+                <input type="hidden" name="_subject" value="New Portfolio Message from Kalaiyarasan P">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-send">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+
+</html>
