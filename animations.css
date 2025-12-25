@@ -1,0 +1,111 @@
+/* --- Staggered Entrance Animations --- */
+
+/* Initially hide items */
+.reveal .skill-item-v2,
+.reveal .project-card-v2,
+.reveal .achievement-card,
+.reveal .experience-card,
+.reveal .glass-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* Reveal items when section is active */
+.reveal.active .skill-item-v2,
+.reveal.active .project-card-v2,
+.reveal.active .achievement-card,
+.reveal.active .experience-card,
+.reveal.active .glass-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Delays (up to 10 items) */
+.reveal.active .skill-item-v2:nth-child(1),
+.reveal.active .project-card-v2:nth-child(1),
+.reveal.active .achievement-card:nth-child(1),
+.reveal.active .experience-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.reveal.active .skill-item-v2:nth-child(2),
+.reveal.active .project-card-v2:nth-child(2),
+.reveal.active .achievement-card:nth-child(2),
+.reveal.active .experience-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.reveal.active .skill-item-v2:nth-child(3),
+.reveal.active .project-card-v2:nth-child(3),
+.reveal.active .achievement-card:nth-child(3),
+.reveal.active .experience-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.reveal.active .skill-item-v2:nth-child(4),
+.reveal.active .project-card-v2:nth-child(4),
+.reveal.active .achievement-card:nth-child(4),
+.reveal.active .experience-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.reveal.active .skill-item-v2:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.reveal.active .skill-item-v2:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.reveal.active .skill-item-v2:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.reveal.active .skill-item-v2:nth-child(8) {
+    transition-delay: 0.8s;
+}
+
+/* --- Glass Shimmer Effect --- */
+.glass-card {
+    position: relative;
+    overflow: hidden !important;
+    /* Ensure shimmer stays inside */
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    /* Wider to pass through completely */
+    height: 100%;
+    background: linear-gradient(115deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.1) 45%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.1) 55%,
+            transparent 60%);
+    transform: skewX(-25deg);
+    transition: padding 0s;
+    /* No delay on property */
+    pointer-events: none;
+    z-index: 2;
+    /* Above content background, below text if possible, but mainly for visual overlay */
+}
+
+/* Trigger Shimmer on Hover */
+.glass-card:hover::before {
+    animation: shimmer 1s forwards;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}

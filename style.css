@@ -803,11 +803,11 @@ section#home {
 
 .stat-icon {
     font-size: 3rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 5px 15px rgba(45, 212, 191, 0.3));
+    -webkit-text-fill-color: transparent; */
+    filter: drop-shadow(0 5px 15px rgba(238, 211, 6, 0.3));
 }
 
 .stat-value {
@@ -1013,3 +1013,56 @@ section#home {
     display: block;
     opacity: 1;
 }
+
+/* Footer Styles */
+.main-footer {
+    padding: 30px 0;
+    text-align: center;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 50px;
+    margin-left: var(--sidebar-width);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 40px;
+    /* Increased from 20px for "add space" */
+}
+
+.footer-socials a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: var(--transition-fast);
+}
+
+.footer-socials a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        margin-left: 0;
+        padding-bottom: 80px;
+    }
+}
+
+
+
+/* Skill Icon Enhanced Glow */
+.skill-item-v2:hover img {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)) brightness(1.1);
+    transform: scale(1.1);
+}
+
