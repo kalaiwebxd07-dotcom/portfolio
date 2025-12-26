@@ -132,12 +132,12 @@ const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', async function(event) {
+    contactForm.addEventListener('submit', async function (event) {
         event.preventDefault();
-        
+
         const btn = contactForm.querySelector('button');
         const originalBtnText = btn.innerHTML;
-        
+
         // Set loading state
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
@@ -145,7 +145,7 @@ if (contactForm) {
         formStatus.className = 'form-status';
 
         const data = new FormData(contactForm);
-        
+
         try {
             const response = await fetch(contactForm.action, {
                 method: contactForm.method,
@@ -175,7 +175,7 @@ if (contactForm) {
             // Reset button state
             btn.disabled = false;
             btn.innerHTML = originalBtnText;
-            
+
             // Clear status message after 5 seconds
             setTimeout(() => {
                 formStatus.textContent = '';
@@ -184,3 +184,18 @@ if (contactForm) {
         }
     });
 }
+
+
+// Spotlight Effect Logic
+const spotlightCards = document.querySelectorAll('.glass-card, .project-card-v2');
+
+spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--cursor-x', `${x}px`);
+        card.style.setProperty('--cursor-y', `${y}px`);
+    });
+});
