@@ -127,12 +127,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handler (Standard Submission for Reliability)
+// Contact Form Handler (AJAX Submission)
 const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', () => {
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
         const btn = contactForm.querySelector('button');
+        const originalBtnText = btn.innerHTML;
+        
+        // Set loading state
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
+
+        const data = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                formStatus.textContent = "Thanks for your message! I'll get back to you soon.";
+                formStatus.classList.add('success');
+                contactForm.reset();
+            } else {
+                const jsonData = await response.json();
+                if (Object.hasOwn(jsonData, 'errors')) {
+                    formStatus.textContent = jsonData.errors.map(error => error.message).join(", ");
+                } else {
+                    formStatus.textContent = "Oops! There was a problem submitting your form";
+                }
+                formStatus.classList.add('error');
+            }
+        } catch (error) {
+            formStatus.textContent = "Oops! There was a problem submitting your form";
+            formStatus.classList.add('error');
+        } finally {
+            // Reset button state
+            btn.disabled = false;
+            btn.innerHTML = originalBtnText;
+            
+            // Clear status message after 5 seconds
+            setTimeout(() => {
+                formStatus.textContent = '';
+                formStatus.className = 'form-status';
+            }, 5000);
+        }
     });
 }
