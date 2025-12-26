@@ -1,4 +1,39 @@
+
+// Custom Cursor Logic
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+if (cursorDot && cursorOutline) {
+    window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        // Dot follows instantly
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+
+        // Outline follows with slight delay/smoothness via animation
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+    });
+
+    // Add hover effect for interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .glass-card, .project-card-v2, input, textarea, .experience-card');
+
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorOutline.classList.add('cursor-hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursorOutline.classList.remove('cursor-hover');
+        });
+    });
+}
+
 // Mobile Navigation Logic
+
 const mobileToggle = document.getElementById('mobileToggle');
 const sidebar = document.querySelector('.sidebar');
 const mobileOverlay = document.getElementById('mobileOverlay');
